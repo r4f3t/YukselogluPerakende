@@ -52,6 +52,10 @@ namespace seyhandagitim
             
             if (oku.Read())
             {
+                if (oku["UserId"].ToString() != "860" || oku["UserId"].ToString() != "861")
+                {
+                    return;
+                }
                 HttpCookie cookie = new HttpCookie("giris");
                 cookie["user"] = text1.Value;
                 cookie["pass"] = oku["Sifresi"].ToString();

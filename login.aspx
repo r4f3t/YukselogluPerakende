@@ -33,7 +33,7 @@
 						<form id="loginform" runat="server">
 						
            <div class="form-group has-feedback">
-            <input id="text1" runat="server" type="search" class="form-control" placeholder="Kullanıcı Adı" />
+            <input id="text1" runat="server" type="search" class="form-control"  placeholder="Kullanıcı Adı" />
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
