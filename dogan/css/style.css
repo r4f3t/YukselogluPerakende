@@ -1,0 +1,239 @@
+/*
+
+HOW TO CREATE A CSS3 DROPDOWN MENU [TUTORIAL]
+
+"How to create a CSS3 Dropdown Menu [Tutorial]" was specially made for DesignModo by our friend Valeriu Timbuc.
+
+Links:
+http://vtimbuc.net/
+https://twitter.com/vtimbuc
+http://designmodo.com
+http://vladimirkudinov.com
+
+*/
+
+/* Reset */
+.menu,
+.menu ul,
+.menu li,
+.menu a {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+/* Menu */
+
+body {
+
+	background-image: url(../img/bgkoza.PNG);
+width:100%;
+height:100%;
+position:relative;
+
+
+	color: ;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	font-style: oblique;
+	line-height: normal;
+	font-weight: lighter;
+	color: #FFF;
+}
+
+.footer{
+	
+	
+	
+	height:555px;
+	
+	position:absolute;bottom:55; width:98.5%;
+	
+	
+	}
+
+.menu {	
+	height: 40px;
+	width: 100%;
+	marquee-direction:forward;
+	marquee-style:alternate;
+
+	background: #4c4e5a;
+	background: -webkit-linear-gradient(top, #990000 0%,#2c2d33 100%);
+	background: -moz-linear-gradient(top, #990000  0%,#2c2d33 100%);
+	background: -o-linear-gradient(top, #990000  0%,#2c2d33 100%);
+	background: -ms-linear-gradient(top, #990000  0%,#2c2d33 100%);
+	background: linear-gradient(top, #990000  0%,#2c2d33 100%);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.menu li {
+	position: relative;
+	list-style: none;
+	float: left;
+	display: block;
+	height: 40px;
+	float:right;
+}
+
+/* Links */
+
+.menu li a {
+	display: block;
+	padding: 0 14px;
+	margin: 6px 0;
+	line-height: 28px;
+	text-decoration: none;
+	border-left: 1px solid #393942;
+	border-right: 1px solid #4f5058;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 16px;
+	color: #f3f3f3;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+	font-style: normal;
+}
+
+.menu li:first-child a { border-left: none; }
+.menu li:last-child a{ border-right: none; }
+
+.menu li:hover > a {
+	color: #B95C00;
+}
+
+/* Sub Menu */
+
+.menu ul {
+	position: absolute;
+	
+    z-index: 2;
+	top: 40px;
+	left: 0;
+
+	opacity: 0;
+	
+	background: #1f2024;
+
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+
+.menu li:hover > ul { opacity: 1; }
+
+.menu ul li {
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	
+	-webkit-transition: height .25s ease .1s;
+	-moz-transition: height .25s ease .1s;
+	-o-transition: height .25s ease .1s;
+	-ms-transition: height .25s ease .1s;
+	transition: height .25s ease .1s;
+}
+
+.menu li:hover > ul li {
+	height: 36px;
+	overflow: visible;
+	padding: 0;
+}
+
+.menu ul li a {
+	width: 170px;
+	
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid #353539;
+	padding-top: 4px;
+	padding-right: 0;
+	padding-bottom: 4px;
+	padding-left: 40px;
+	
+}
+
+.menu ul li:last-child a { border: none; }
+
+/* Icons */
+.menu a.anasayfa{
+	background: url(../img/home2.png) no-repeat }
+	.menu a.siparis{
+		
+	background: url(../img/file2.png) no-repeat }
+	.menu a.cari{
+	background: url(../img/cari.png) no-repeat }
+	.menu a.kampanya{
+	background: url(../img/kampanya2.png) no-repeat }
+	.menu a.ayarlar{
+	background: url(../img/download3.png) no-repeat }
+	.menu a.hesap{
+	background: url(../img/hesap2.png) no-repeat }
+.menu a.documents { background: url(../img/play.png) no-repeat 12px center; }
+.menu a.messages { background: url(../img/play.png) no-repeat 12px center; }
+.menu a.signout { background: url(../img/play.png) no-repeat 12px center; }
+
+
+
+#slider{
+	width:960;
+	height:360px;
+background-image:url(../img/bannerbg.png); background-repeat:no-repeat;
+	
+	
+	}
+	
+#main {
+	margin:auto;
+	width:79%;
+	
+
+  
+	
+	}	
+	
+.duyuru{
+	width:250px;
+	height:200px;
+	border: 3px dashed #6F6F6F; /* Kenar kalınlığı, şekli ve rengi */
+    padding: 8px;
+	padding-left:28px;
+float:left;
+	margin-top:50px;
+	margin-left:160px;
+	margin-right:10px;
+	background-color:#FFF;
+      
+	 
+}
+		
+	.footer{
+clear:both;
+
+width:960;
+margin-top:350px;
+
+padding:10px;
+padding-top:19px;
+text-align:center;
+background-color:#5E0000;
+height:45px;
+}
+	
+	

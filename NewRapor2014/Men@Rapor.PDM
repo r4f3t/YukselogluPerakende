@@ -1,0 +1,257 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=c:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\180106SETUP
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+SSCSDK80.DLL=
+u2LBAR.DLL=
+u25TOTAL.DLL=
+u25STORE.DLL=
+p2BBND.DLL=
+p2BBDE.DLL=
+Crystal=
+kivancstokenv2.rpt=
+kasahar.rpt=
+carihar.rpt=
+basicstok.rpt=
+stokenv.rpt=
+odeme.rpt=
+mental.ini=
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=
+C:\Program Files\Developer Express Inc\XpressEditors Library\dXEditrs.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSSTDFMT.DLL=
+C:\WINDOWS\system32\MSDATGRD.OCX=
+
+[Package|Standard Setup Package 1|Files Added]
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\mental.ini=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\odeme.rpt=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\stokenv.rpt=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\basicstok.rpt=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\carihar.rpt=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\kasahar.rpt=
+c:\documents and settings\silan\belgelerim\yeni projeler\obje\objetop\genelraporobje\kivancstokenv2.rpt=
+
+[Package|Standard Setup Package 1|Files Removed]
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\msvcrt.dll=
+d:\vbprojeler\ainfo\men@rapor\basicstok.rpt=
+d:\vbprojeler\ainfo\men@rapor\carihar.rpt=
+d:\vbprojeler\ainfo\men@rapor\kasahar.rpt=
+d:\vbprojeler\ainfo\men@rapor\kivancstokenv2.rpt=
+d:\vbprojeler\ainfo\men@rapor\odeme.rpt=
+d:\vbprojeler\ainfo\men@rapor\stokenv.rpt=
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=Yes
+C:\WINDOWS\system32\Crystl32.OCX=Yes
+C:\WINDOWS\system32\crpe32.dll=Yes
+C:\WINDOWS\system32\Implode.dll=Yes
+C:\WINDOWS\system32\Crpaig80.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=No
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\Crystal\Crxlat32.dll=Yes
+C:\WINDOWS\system32\p2bdao.dll=Yes
+C:\WINDOWS\Crystal\p2bxbse.dll=Yes
+C:\WINDOWS\system32\p2ctdao.dll=Yes
+C:\WINDOWS\system32\p2irdao.dll=Yes
+C:\WINDOWS\Crystal\p2sifmx.dll=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\p2sodbc.dll=Yes
+C:\WINDOWS\Crystal\p2sora7.dll=Yes
+C:\WINDOWS\Crystal\p2ssql.dll=Yes
+C:\WINDOWS\Crystal\p2ssyb10.dll=Yes
+C:\WINDOWS\Crystal\p2soledb.dll=Yes
+C:\WINDOWS\Crystal\u2ddisk.dll=Yes
+C:\WINDOWS\Crystal\u2dmapi.dll=Yes
+C:\WINDOWS\Crystal\u2dnotes.dll=Yes
+C:\WINDOWS\Crystal\u2dpost.dll=Yes
+C:\WINDOWS\Crystal\u2dvim.dll=Yes
+C:\WINDOWS\Crystal\u2dapp.dll=Yes
+C:\WINDOWS\Crystal\u2fcr.dll=Yes
+C:\WINDOWS\Crystal\u2fhtml.dll=Yes
+C:\WINDOWS\Crystal\u2fodbc.dll=Yes
+C:\WINDOWS\Crystal\u2frec.dll=Yes
+C:\WINDOWS\Crystal\u2frtf.dll=Yes
+C:\WINDOWS\Crystal\u2fsepv.dll=Yes
+C:\WINDOWS\Crystal\u2ftext.dll=Yes
+C:\WINDOWS\Crystal\u2fwks.dll=Yes
+C:\WINDOWS\Crystal\u2fwordw.dll=Yes
+C:\WINDOWS\Crystal\u2fxls.dll=Yes
+C:\WINDOWS\Crystal\u25dts.dll=Yes
+C:\WINDOWS\Crystal\u2l2000.dll=Yes
+C:\WINDOWS\Crystal\u2lcom.dll=Yes
+C:\WINDOWS\Crystal\u2ldts.dll=Yes
+C:\WINDOWS\Crystal\u2lsamp1.dll=Yes
+C:\WINDOWS\Crystal\u252000.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\dXEditrs.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Men@Rapor.exe=Yes
+C:\WINDOWS\system32\P2bbnd.dll=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Mental.ini=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Odeme.rpt=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\StokEnv.rpt=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\BasicStok.rpt=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\CariHar.rpt=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KasaHar.rpt=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KivancStokEnv2.rpt=Yes
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\VBProjeler\AInfo\Men@Rapor\Men@Rapor.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Developer Express Inc\XpressEditors Library\dXEditrs.dll=$(WinSysPath)
+C:\Program Files\Developer Express Inc\XpressSideBar\dXSBar.dll=$(WinSysPath)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\Crxlat32.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2bdao.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2bxbse.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2ctdao.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2irdao.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2sifmx.dll=$(WinSysPath)
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2sodbc.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2sora7.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2ssql.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2ssyb10.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\p2soledb.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2ddisk.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dmapi.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dnotes.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dpost.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dvim.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dapp.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fcr.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fhtml.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fodbc.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frec.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frtf.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fsepv.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2ftext.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwks.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwordw.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fxls.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u25dts.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2l2000.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2lcom.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2ldts.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2lsamp1.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u252000.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\VBProjeler\AInfo\Men@Rapor\Mental.ini=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\Odeme.rpt=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\StokEnv.rpt=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\BasicStok.rpt=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\CariHar.rpt=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\KasaHar.rpt=$(AppPath)
+D:\VBProjeler\AInfo\Men@Rapor\KivancStokEnv2.rpt=$(AppPath)
+C:\Documents and Settings\Erdal Alpay Bekret\Desktop\Men@Rapor\Men@Rapor.exe=$(AppPath)
+C:\WINDOWS\system32\dXEditrs.dll=$(WinSysPath)
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Men@Rapor.exe=$(AppPath)
+C:\WINDOWS\system32\P2bbnd.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Mental.ini=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Odeme.rpt=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\StokEnv.rpt=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\BasicStok.rpt=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\CariHar.rpt=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KasaHar.rpt=$(AppPath)
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KivancStokEnv2.rpt=$(AppPath)
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=$(WinSysPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\VBProjeler\AInfo\Men@Rapor\Men@Rapor.exe=No
+C:\WINDOWS\system32\Implode.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+D:\VBProjeler\AInfo\Men@Rapor\Mental.ini=No
+D:\VBProjeler\AInfo\Men@Rapor\Odeme.rpt=No
+D:\VBProjeler\AInfo\Men@Rapor\StokEnv.rpt=No
+D:\VBProjeler\AInfo\Men@Rapor\BasicStok.rpt=No
+D:\VBProjeler\AInfo\Men@Rapor\CariHar.rpt=No
+D:\VBProjeler\AInfo\Men@Rapor\KasaHar.rpt=No
+D:\VBProjeler\AInfo\Men@Rapor\KivancStokEnv2.rpt=No
+C:\Documents and Settings\Erdal Alpay Bekret\Desktop\Men@Rapor\Men@Rapor.exe=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Men@Rapor.exe=Yes
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Mental.ini=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\Odeme.rpt=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\StokEnv.rpt=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\BasicStok.rpt=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\CariHar.rpt=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KasaHar.rpt=No
+C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\KivancStokEnv2.rpt=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Men@Rapor
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=c:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\180106SETUP
+ProjectFolder=C:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje
+ServerSideCab=
+File1=c:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\180106SETUP\setup.exe
+File2=c:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\180106SETUP\Setup.Lst
+File3=c:\Documents and Settings\SILAN\Belgelerim\Yeni PROJELER\OBJE\OBJETOP\GENELRAPORobje\180106SETUP\Men@Rapor.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Men@Rapor
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Men@Rapor]
+Icon1=Men@Rapor.exe
+Title1=Men@Rapor
+StartIn1=$(AppPath)
+Key1=Icon1

@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15C96FA8-B9F8-4714-8B22-6B73ACA89978}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>seyhandagitim</RootNamespace>
+    <AssemblyName>seyhandagitim</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.50.0\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\jqurydenemeleri\ilhanlarwebson - Kopya - Kopya\bin\DevExpress.Printing.v13.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxThemes.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.DXStyle.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.LightGray.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.LightGray.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.MetropolisDark.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.MetropolisLight.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Black.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2007Black.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Blue.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2007Blue.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Silver.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2007Silver.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2010Black.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2010Blue.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Silver.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2010Silver.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2013.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Office2013.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Seven.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.Seven.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.TouchlineDark.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.TouchlineDark.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.VS2010.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Themes.VS2010.v13.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.1.Web, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2014.2.724.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2014.2.724.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AA_Kisiler.aspx" />
+    <Content Include="AA_Sohbet.aspx" />
+    <Content Include="AA_SohbetTem.aspx" />
+    <Content Include="AcikFatura.aspx" />
+    <Content Include="AutoComplete.asmx" />
+    <Content Include="A_BekleyenSip.aspx" />
+    <Content Include="A_Kisiler.aspx" />
+    <Content Include="A_Sohbet.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\etalage.css" />
+    <Content Include="css\fwslider.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\style.css" />
+    <Content Include="default.aspx" />
+    <Content Include="gsipSimple.aspx" />
+    <Content Include="gsip.aspx" />
+    <Content Include="gsip2.aspx" />
+    <Content Include="icons\Fatcow-Farm-Fresh-Bullet-arrow-right.ico" />
+    <Content Include="icons\Graphicrating-Koloria-Trash-Delete.ico" />
+    <Content Include="image\delete.png" />
+    <Content Include="image\Fasticon-Shop-Cart-Shop-cart %281%29.ico" />
+    <Content Include="image\find.png" />
+    <Content Include="image\Gakuseisean-Ivista-Error.ico" />
+    <Content Include="image\logo.jpg" />
+    <Content Include="image\shopping-cart-icon.png" />
+    <Content Include="image\slider.jpg" />
+    <Content Include="image\Start-Menu-Search-icon.png" />
+    <Content Include="image\upload2.jpg" />
+    <Content Include="index.html" />
+    <Content Include="index2.html" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\CMBNULLTEXT.js" />
+    <Content Include="js\dynamic.js" />
+    <Content Include="js\fwslider.js" />
+    <Content Include="js\info.png" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.etalage.min.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.flexisel.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\responsive-nav.js" />
+    <Content Include="js\uisearch.js" />
+    <Content Include="js\Yeni Metin Belgesi.txt" />
+    <Content Include="login.aspx" />
+    <Content Include="login.html" />
+    <Content Include="myWebService.asmx" />
+    <Content Include="Profil.aspx" />
+    <Content Include="rimg\Fasticon-Essential-Toolbar-Shopping-cart.ico" />
+    <Content Include="stok.aspx" />
+    <Content Include="ZZcariextre.aspx" />
+    <Content Include="ZZcbilg.aspx" />
+    <Content Include="ZZceksenet.aspx" />
+    <Content Include="ZZFatura.aspx" />
+    <Content Include="ZZFatura2.aspx" />
+    <Content Include="ZZLogin.aspx" />
+    <Content Include="ZZPlCariextre.aspx" />
+    <Content Include="ZZPlcbilg.aspx" />
+    <Content Include="ZZPLFatura.aspx" />
+    <Content Include="ZZplmain.aspx" />
+    <Content Include="zzRep.aspx" />
+    <Content Include="ZZsepet.aspx" />
+    <Content Include="ZZSiparis.aspx" />
+    <Content Include="zzssips.aspx" />
+    <Content Include="ZZZOneri.aspx" />
+    <Content Include="zzzPrint.aspx" />
+    <Content Include="ZZZUAlternate.aspx" />
+    <Content Include="ZZZUdetay.aspx" />
+    <Content Include="ZZZUrunGec.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AA_Kisiler.aspx.cs">
+      <DependentUpon>AA_Kisiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AA_Kisiler.aspx.designer.cs">
+      <DependentUpon>AA_Kisiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AA_Sohbet.aspx.cs">
+      <DependentUpon>AA_Sohbet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AA_Sohbet.aspx.designer.cs">
+      <DependentUpon>AA_Sohbet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AA_SohbetTem.aspx.cs">
+      <DependentUpon>AA_SohbetTem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AA_SohbetTem.aspx.designer.cs">
+      <DependentUpon>AA_SohbetTem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcikFatura.aspx.cs">
+      <DependentUpon>AcikFatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcikFatura.aspx.designer.cs">
+      <DependentUpon>AcikFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoComplete.asmx.cs">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="A_BekleyenSip.aspx.cs">
+      <DependentUpon>A_BekleyenSip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A_BekleyenSip.aspx.designer.cs">
+      <DependentUpon>A_BekleyenSip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A_Kisiler.aspx.cs">
+      <DependentUpon>A_Kisiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A_Kisiler.aspx.designer.cs">
+      <DependentUpon>A_Kisiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A_Sohbet.aspx.cs">
+      <DependentUpon>A_Sohbet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A_Sohbet.aspx.designer.cs">
+      <DependentUpon>A_Sohbet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cari2Grp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cari2Grp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="classes\baglanti.cs" />
+    <Compile Include="classes\baglantiChat.cs" />
+    <Compile Include="classes\chart1.cs" />
+    <Compile Include="classes\FacebookIslemleri.cs" />
+    <Compile Include="classes\FacebookProfil.cs" />
+    <Compile Include="gsipSimple.aspx.cs">
+      <DependentUpon>gsipSimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gsipSimple.aspx.designer.cs">
+      <DependentUpon>gsipSimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemHierarchy.cs" />
+    <Compile Include="Profil.aspx.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profil.aspx.designer.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPTCTahsilatDökümü.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTCTahsilatDökümü.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gsip.aspx.cs">
+      <DependentUpon>gsip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gsip.aspx.designer.cs">
+      <DependentUpon>gsip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gsip2.aspx.cs">
+      <DependentUpon>gsip2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gsip2.aspx.designer.cs">
+      <DependentUpon>gsip2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LTEMASTER.Master.cs">
+      <DependentUpon>LTEMASTER.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LTEMASTER.Master.designer.cs">
+      <DependentUpon>LTEMASTER.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LTEMASTER2.Master.cs">
+      <DependentUpon>LTEMASTER2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LTEMASTER2.Master.designer.cs">
+      <DependentUpon>LTEMASTER2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAna.Master.cs">
+      <DependentUpon>MasterAna.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAna.Master.designer.cs">
+      <DependentUpon>MasterAna.Master</DependentUpon>
+    </Compile>
+    <Compile Include="myWebService.asmx.cs">
+      <DependentUpon>myWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NSipMaster.Master.cs">
+      <DependentUpon>NSipMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSipMaster.Master.designer.cs">
+      <DependentUpon>NSipMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NSipMasterSlid.Master.cs">
+      <DependentUpon>NSipMasterSlid.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSipMasterSlid.Master.designer.cs">
+      <DependentUpon>NSipMasterSlid.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NSipPl.Master.cs">
+      <DependentUpon>NSipPl.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NSipPl.Master.designer.cs">
+      <DependentUpon>NSipPl.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Abstract\IItemService.cs" />
+    <Compile Include="Services\Concrete\ItemManager.cs" />
+    <Compile Include="sqlislemler.cs" />
+    <Compile Include="stok.aspx.cs">
+      <DependentUpon>stok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stok.aspx.designer.cs">
+      <DependentUpon>stok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPTAlisSatisGenelPlasiyer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTAlisSatisGenelPlasiyer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTSatisKarCari.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTSatisKarCari.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\C_TahsilatDökümü.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C_TahsilatDökümü.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\E_GenelDurum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E_GenelDurum.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\E_GenelTahsilat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E_GenelTahsilat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\Mizan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mizan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\T_1.AlisSatisGenel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T_1.AlisSatisGenel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\T_1.AlisSatisGenelPlasiyer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T_1.AlisSatisGenelPlasiyer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="webrpts\T_6-Satis-Kar-Cari-.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T_6-Satis-Kar-Cari-.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZZcariextre.aspx.cs">
+      <DependentUpon>ZZcariextre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZcariextre.aspx.designer.cs">
+      <DependentUpon>ZZcariextre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZcbilg.aspx.cs">
+      <DependentUpon>ZZcbilg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZcbilg.aspx.designer.cs">
+      <DependentUpon>ZZcbilg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZceksenet.aspx.cs">
+      <DependentUpon>ZZceksenet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZceksenet.aspx.designer.cs">
+      <DependentUpon>ZZceksenet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZFatura.aspx.cs">
+      <DependentUpon>ZZFatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZFatura.aspx.designer.cs">
+      <DependentUpon>ZZFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZFatura2.aspx.cs">
+      <DependentUpon>ZZFatura2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZFatura2.aspx.designer.cs">
+      <DependentUpon>ZZFatura2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZLogin.aspx.cs">
+      <DependentUpon>ZZLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZLogin.aspx.designer.cs">
+      <DependentUpon>ZZLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZPlCariextre.aspx.cs">
+      <DependentUpon>ZZPlCariextre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZPlCariextre.aspx.designer.cs">
+      <DependentUpon>ZZPlCariextre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZPlcbilg.aspx.cs">
+      <DependentUpon>ZZPlcbilg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZPlcbilg.aspx.designer.cs">
+      <DependentUpon>ZZPlcbilg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZPLFatura.aspx.cs">
+      <DependentUpon>ZZPLFatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZPLFatura.aspx.designer.cs">
+      <DependentUpon>ZZPLFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZplmain.aspx.cs">
+      <DependentUpon>ZZplmain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZplmain.aspx.designer.cs">
+      <DependentUpon>ZZplmain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zzRep.aspx.cs">
+      <DependentUpon>zzRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zzRep.aspx.designer.cs">
+      <DependentUpon>zzRep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZsepet.aspx.cs">
+      <DependentUpon>ZZsepet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZsepet.aspx.designer.cs">
+      <DependentUpon>ZZsepet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZSiparis.aspx.cs">
+      <DependentUpon>ZZSiparis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZSiparis.aspx.designer.cs">
+      <DependentUpon>ZZSiparis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zzssips.aspx.cs">
+      <DependentUpon>zzssips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zzssips.aspx.designer.cs">
+      <DependentUpon>zzssips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZZOneri.aspx.cs">
+      <DependentUpon>ZZZOneri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZZOneri.aspx.designer.cs">
+      <DependentUpon>ZZZOneri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zzzPrint.aspx.cs">
+      <DependentUpon>zzzPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zzzPrint.aspx.designer.cs">
+      <DependentUpon>zzzPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZZUAlternate.aspx.cs">
+      <DependentUpon>ZZZUAlternate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZZUAlternate.aspx.designer.cs">
+      <DependentUpon>ZZZUAlternate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZZUdetay.aspx.cs">
+      <DependentUpon>ZZZUdetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZZUdetay.aspx.designer.cs">
+      <DependentUpon>ZZZUdetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZZZUrunGec.aspx.cs">
+      <DependentUpon>ZZZUrunGec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZZZUrunGec.aspx.designer.cs">
+      <DependentUpon>ZZZUrunGec.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterAna.Master" />
+    <Content Include="NSipMaster.Master" />
+    <Content Include="NSipMasterSlid.Master" />
+    <Content Include="NSipPl.Master" />
+    <Content Include="LTEMASTER2.Master" />
+    <Content Include="LTEMASTER.Master" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ADAGUN.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\GOZDEDAGİTİM.pubxml" />
+    <None Include="Properties\PublishProfiles\GOZDEREPORT.pubxml" />
+    <None Include="Properties\PublishProfiles\seyhan.pubxml" />
+    <None Include="Properties\PublishProfiles\telesd.pubxml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cari2Grp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cari2Grp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTCTahsilatDökümü.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTCTahsilatDökümü.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTAlisSatisGenelPlasiyer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTAlisSatisGenelPlasiyer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTSatisKarCari.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTSatisKarCari.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\C_TahsilatDökümü.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>C_TahsilatDökümü.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\E_GenelDurum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>E_GenelDurum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\E_GenelTahsilat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>E_GenelTahsilat.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\Mizan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Mizan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\T_1.AlisSatisGenel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>T_1.AlisSatisGenel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\T_1.AlisSatisGenelPlasiyer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>T_1.AlisSatisGenelPlasiyer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="webrpts\T_6-Satis-Kar-Cari-.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>T_6-Satis-Kar-Cari-.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52742</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50726/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
