@@ -399,7 +399,8 @@
 
             </ContentTemplate>
         </asp:UpdatePanel>
-
+        <asp:HiddenField ID="HFISADD" Value="1" runat="server" />
+         <asp:HiddenField ID="HFSipLineRef"  runat="server" />
         <%#Convert.ToDecimal(Eval("Fiyat")).ToString("N") %>
     </form>
 </body>

@@ -79,19 +79,19 @@
 
     <div style="float: right; display: inline-block; margin-right: 0px;">
         <div style="display: inline-block">
-            <dx:ASPxButton ID="BTNIrsOnay" runat="server" Width="90px" Height="55px" CssClass="sol" OnClick="BTNIrsOnay_Click" Text="İrsaliye " Visible="false">
+            <dx:ASPxButton ID="BTNIrsOnay" runat="server" Width="90px" Height="55px" CssClass="sol" OnClick="BTNIrsOnay_Click" Text="İrsaliye " Visible="true">
             </dx:ASPxButton>
         </div>
-        <div style="display: inline-block">
+        <div style="display: none">
             <dx:ASPxButton ID="BtnSipOnay" runat="server" Width="90px" Height="55px" CssClass="sol" OnClick="BtnSipOnay_Click" Text=" " Border-BorderColor="Transparent" BackColor="Transparent">
                 <BackgroundImage ImageUrl="siponayı.png" />
                 <Border BorderColor="Transparent" />
             </dx:ASPxButton>
         </div>
-        <div style="display: inline-block">
+        <div style="display: none">
             <dx:ASPxButton ID="BtnCIKTI" CssClass="sol" runat="server" Width="90px" Height="55px" Text="" OnClick="BtnCIKTI_Click" BackColor="Transparent" BackgroundImage-ImageUrl="~/rimg/yaz.png"></dx:ASPxButton>
         </div>
-        <div style="display: inline-block">
+        <div style="display: none">
             <dx:ASPxButton ID="BtnSipSil" OnClick="BtnSipSil_Click" runat="server" Width="90px" Height="55px" Text="" RightToLeft="False" BackColor="Transparent" BackgroundImage-ImageUrl="~/rimg/temizle.png"></dx:ASPxButton>
         </div>
     </div>
@@ -175,7 +175,7 @@
 
             </dx:GridViewDataMemoColumn>
 
-            <dx:GridViewCommandColumn VisibleIndex="13" CellStyle-Font-Size="12pt" Width="70px">
+            <dx:GridViewCommandColumn VisibleIndex="13" Visible="false" CellStyle-Font-Size="12pt" Width="70px">
                 <EditButton Visible="false" Text="Düzenle">
                     <Image Height="15" Width="15" Url="/image/add.png"></Image>
                 </EditButton>

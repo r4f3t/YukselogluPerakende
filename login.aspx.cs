@@ -10,14 +10,14 @@ using seyhandagitim;
 
 namespace seyhandagitim
 {
-    
+
     public partial class login : System.Web.UI.Page
     {
-      
+
         //Global Değişkenlerimiz G...
         public static string yıl = "17", GDFirma = "01", GEFirma = "", GDDonem = "002", GEDonem = "017";
         baglanti bag = new baglanti();
-        
+
         SqlCommand cmd = new SqlCommand();
         SqlCommand cmd2 = new SqlCommand();
         SqlCommand cmd3 = new SqlCommand();
@@ -34,25 +34,26 @@ namespace seyhandagitim
                 Response.Redirect("default.aspx");
             }
         }
-       
-         int yetki;
-         string zaman;
+
+        int yetki;
+        string zaman;
         protected void Button1_Click(object sender, EventArgs e)
         {
             zaman = DateTime.Now.ToString("MM/dd/yyyy");
-          //  if (DateTime.Now >= Convert.ToDateTime("2016-10-01")) { return; }
+            //  if (DateTime.Now >= Convert.ToDateTime("2016-10-01")) { return; }
             bag.acik();
             cmd.Connection = bag.Gcnn;
-          //  cmd.CommandText = "select * from ZTbLUseR where Adi=@User and Sifresi=@Pass and CONVERT(VARCHAR(12),STIME,114)<'" + zaman + "' and  CONVERT(VARCHAR(12),FTIME,114)>'" + zaman + "'";
+            //  cmd.CommandText = "select * from ZTbLUseR where Adi=@User and Sifresi=@Pass and CONVERT(VARCHAR(12),STIME,114)<'" + zaman + "' and  CONVERT(VARCHAR(12),FTIME,114)>'" + zaman + "'";
             cmd.CommandText = "select * from ZTbLUseR where Adi=@User and Sifresi=@Pass and FLAG=0 ";
-            cmd.Parameters.AddWithValue("@User",text1.Value);
+            cmd.Parameters.AddWithValue("@User", text1.Value);
             cmd.Parameters.AddWithValue("@Pass", text2.Value);
             SqlDataReader oku;
             oku = cmd.ExecuteReader();
-            
+
             if (oku.Read())
             {
-                if (oku["UserId"].ToString() != "860" || oku["UserId"].ToString() != "861")
+                var UserId = oku["UserId"].ToString();
+                if (UserId != "860" && UserId != "861")
                 {
                     return;
                 }
@@ -72,8 +73,8 @@ namespace seyhandagitim
                 Session["CariAdi"] = oku["CariAdi"].ToString();
                 cookie["SOHBET"] = oku["SOHBET"].ToString();
                 cookie.Expires = DateTime.Now.AddDays(1);
-               
-               
+
+
                 Response.Cookies.Add(cookie);
                 HttpCookie cari = new HttpCookie("cari");
                 cari["cariref"] = "";
@@ -85,36 +86,36 @@ namespace seyhandagitim
                 rft.Expires = DateTime.Now.AddDays(1);
 
                 Response.Cookies.Add(rft);
-              
-                    HttpCookie musteri = new HttpCookie("myCerez");
-                    musteri["CLIENTREF"] = oku["CLIENTREF"].ToString();
 
-                    if (yetki == 2)
+                HttpCookie musteri = new HttpCookie("myCerez");
+                musteri["CLIENTREF"] = oku["CLIENTREF"].ToString();
+
+                if (yetki == 2)
+                {
+                    string GFirmaKodu = "";
+                    SqlDataReader oku2 = baglanti.DataReaderAl("select CODE,SPECODE FROM LG_" + baglanti.GFirma + "_CLCARD where LOGICALREF=" + oku["CLIENTREF"].ToString() + "");
+                    if (oku2.Read())
                     {
-                        string GFirmaKodu = "";
-                        SqlDataReader oku2 = baglanti.DataReaderAl("select CODE,SPECODE FROM LG_" + baglanti.GFirma + "_CLCARD where LOGICALREF=" + oku["CLIENTREF"].ToString() + "");
-                        if (oku2.Read())
+                        GFirmaKodu = oku2["CODE"].ToString();
+                        if (GFirmaKodu.Substring(GFirmaKodu.Length - 2, 2) == " 9")
                         {
-                            GFirmaKodu = oku2["CODE"].ToString();
-                            if (GFirmaKodu.Substring(GFirmaKodu.Length - 2, 2) == " 9")
-                            {
-                                musteri["DIVISION"] = "1";
-                                musteri["TRADINGGRP"] = "02 MAVi";
-                                musteri["KDVVAR"] = "1";
-                            }
-                            else 
-                            {
-                                musteri["TRADINGGRP"] = "01 SİYAH";
-                                musteri["KDVVAR"] = "0";
-                            }
+                            musteri["DIVISION"] = "1";
+                            musteri["TRADINGGRP"] = "02 MAVi";
+                            musteri["KDVVAR"] = "1";
                         }
                         else
                         {
-                            return;
+                            musteri["TRADINGGRP"] = "01 SİYAH";
+                            musteri["KDVVAR"] = "0";
                         }
                     }
-                    musteri.Expires = DateTime.Now.AddDays(1);
-                    Response.Cookies.Add(musteri);
+                    else
+                    {
+                        return;
+                    }
+                }
+                musteri.Expires = DateTime.Now.AddDays(1);
+                Response.Cookies.Add(musteri);
                 bag.kapali();
                 //string ZiyaretciIPsi = "";
                 //if (HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] != null)
@@ -132,7 +133,7 @@ namespace seyhandagitim
                 ////bag.kapali();
 
                 HttpCookie giris = Request.Cookies["giris"];
-                if (yetki == 1 || yetki==4)
+                if (yetki == 1 || yetki == 4)
                 {
                     Response.Redirect("ZZplmain.aspx");
                 }
@@ -140,15 +141,15 @@ namespace seyhandagitim
                 {
                     Response.Redirect("gsipSimple.aspx");
                 }
-              
-              
-              
-               
+
+
+
+
 
             }
             else
             {
-              //  label.InnerText= "Kullanıcı Adı Yada Şifre Hatalı...";
+                //  label.InnerText= "Kullanıcı Adı Yada Şifre Hatalı...";
             }
 
 
@@ -166,11 +167,11 @@ namespace seyhandagitim
             cookie["cariref"] = "120.%";
             cookie["userid"] = "1";
             cookie["yetki"] = "1";
-            cookie["sipstr"] ="ALP";
-           // yetki = Convert.ToInt32(oku["Yetkisi"].ToString());
+            cookie["sipstr"] = "ALP";
+            // yetki = Convert.ToInt32(oku["Yetkisi"].ToString());
             cookie["yil"] = "15";
             cookie.Expires = DateTime.Now.AddDays(1);
-            Response.Cookies.Add(cookie);  
+            Response.Cookies.Add(cookie);
             var Link = Face.CrateLoginUrl().ToString();
             Response.Redirect(Link);
         }

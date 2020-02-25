@@ -183,12 +183,12 @@
                 pcLogin.SetContentUrl('zzzoneri.aspx?LOWLEVELREF=' + returnValue + '&URUNID=' + stockref + '&sayfaYenile=' + sayfaYenile);
                 pcLogin.ShowAtPos((window.innerWidth / 2) - 445, window.innerHeight / 2 - 250);
             } else if (sayfaYenile == '1') {
-                window.location.href = 'gsip.aspx';
+                window.location.href = 'gsipsimple.aspx';
             } else {
                 __doPostBack('CMBAITOZ', '')
             }
             //else if (c != 1) {
-            //    window.location.href = 'gsip.aspx';
+            //    window.location.href = 'gsipsimple.aspx';
             //} 
         }
 

@@ -387,12 +387,12 @@ namespace seyhandagitim
 
         protected void GridSepet_HtmlDataCellPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableDataCellEventArgs e)
         {
-            if (e.DataColumn.Name == "UPDATECOL")
-            {
-                e.Cell.Attributes.Add("onclick", "EditorOnInit(" + GridSepet.GetRowValues(e.VisibleIndex, "STOCKREF").ToString() + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "CODE").ToString() + "-" + GridSepet.GetRowValues(e.VisibleIndex, "UrunAd").ToString() + "'," + e.VisibleIndex + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "LOGICALREF").ToString() + "');");
-                // e.Cell.Attributes.Add("onclick", "onCellClick(" + e.VisibleIndex + ", '" + e.Cell.Text + "')");
-                e.Cell.Text = "Satırı\nGüncelle";
-            }
+            //if (e.DataColumn.Name == "UPDATECOL")
+            //{
+            //    e.Cell.Attributes.Add("onclick", "EditorOnInit(" + GridSepet.GetRowValues(e.VisibleIndex, "STOCKREF").ToString() + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "CODE").ToString() + "-" + GridSepet.GetRowValues(e.VisibleIndex, "UrunAd").ToString() + "'," + e.VisibleIndex + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "LOGICALREF").ToString() + "');");
+            //    // e.Cell.Attributes.Add("onclick", "onCellClick(" + e.VisibleIndex + ", '" + e.Cell.Text + "')");
+            //    e.Cell.Text = "Satırı\nGüncelle";
+            //}
 
         }
         protected void BTNIrsOnay_Click(object sender, EventArgs e)
