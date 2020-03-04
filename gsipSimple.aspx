@@ -317,7 +317,7 @@
 
 
                     <a href="gsipSimple.aspx" class="btn btn-danger pull-right">Temizle</a>
-                    <a href="gsip.aspx" class="btn btn-success pull-right">Detaylı Arama</a>
+                   
 
 
                 </asp:Panel>
