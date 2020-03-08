@@ -53,7 +53,7 @@ namespace seyhandagitim
             if (oku.Read())
             {
                 var UserId = oku["UserId"].ToString();
-                if (UserId != "860" && UserId != "861")
+                if (UserId != "860" && UserId != "861" && UserId!= "20")
                 {
                     return;
                 }

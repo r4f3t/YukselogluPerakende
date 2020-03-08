@@ -175,7 +175,7 @@
 
             </dx:GridViewDataMemoColumn>
 
-            <dx:GridViewCommandColumn VisibleIndex="13" Visible="false" CellStyle-Font-Size="12pt" Width="70px">
+            <dx:GridViewCommandColumn VisibleIndex="13"  CellStyle-Font-Size="12pt" Width="70px">
                 <EditButton Visible="false" Text="Düzenle">
                     <Image Height="15" Width="15" Url="/image/add.png"></Image>
                 </EditButton>

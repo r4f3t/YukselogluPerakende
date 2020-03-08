@@ -273,15 +273,15 @@
                     <td colspan="8">
                         <asp:UpdatePanel ID="UpdatePanel10" runat="server">
                             <ContentTemplate>
-                                <asp:Label ID="LBLKazanc" Visible="true"  ForeColor="#990000" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt" Text="Miktarı Çok Seçerek Daha Ucuza Alabilirsiniz!!!"></asp:Label>
+                                <asp:Label ID="LBLKazanc" Visible="true" ForeColor="#990000" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt" Text="Miktarı Çok Seçerek Daha Ucuza Alabilirsiniz!!!"></asp:Label>
                             </ContentTemplate>
                         </asp:UpdatePanel>
-                         <asp:Label ID="LBLFiyatUyar" Visible="false"  ForeColor="#990000" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt" Text=""></asp:Label>
+                        <asp:Label ID="LBLFiyatUyar" Visible="false" ForeColor="#990000" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="8">
- <asp:Label ID="LBLMikKampanyasi" Visible="false"  ForeColor="#0000ff" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="18pt" Text="Bu Üründe Miktar Kampanyası Vardır!!!"></asp:Label>
+                        <asp:Label ID="LBLMikKampanyasi" Visible="false" ForeColor="#0000ff" Font-Bold="true" runat="server" Font-Names="Trebuchet MS" Font-Size="18pt" Text="Bu Üründe Miktar Kampanyası Vardır!!!"></asp:Label>
                     </td>
                 </tr>
                 <tr style="height: 5px; text-align: center;">
@@ -361,7 +361,12 @@
         <asp:HiddenField ID="HFUP119" runat="server" />
         <asp:HiddenField ID="HFCYPHCODE" runat="server" />
         <asp:HiddenField ID="HFUREF" runat="server" />
-        <asp:HiddenField ID="HFPRCPRICE" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel17" runat="server">
+            <ContentTemplate>
+                <asp:HiddenField ID="HFPRCPRICE" runat="server" />
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
 
         <asp:HiddenField ID="HFCKOD" runat="server" />
 
@@ -400,7 +405,8 @@
             </ContentTemplate>
         </asp:UpdatePanel>
         <asp:HiddenField ID="HFISADD" Value="1" runat="server" />
-         <asp:HiddenField ID="HFSipLineRef"  runat="server" />
+        <asp:HiddenField ID="HFSipLineRef" runat="server" />
+
         <%#Convert.ToDecimal(Eval("Fiyat")).ToString("N") %>
     </form>
 </body>

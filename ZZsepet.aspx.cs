@@ -129,10 +129,10 @@ namespace seyhandagitim
                 }
 
 
-            //son fiyat kontrolü  var ise bir oran hesapla kamporana yaz 
-            //aktarım yaparken bu oranı bir satırda belirt diğer oranları açıklamalara yaz
+                //son fiyat kontrolü  var ise bir oran hesapla kamporana yaz 
+                //aktarım yaparken bu oranı bir satırda belirt diğer oranları açıklamalara yaz
 
-            rafet:
+                rafet:
                 int i = 0;
             }
 
@@ -235,10 +235,10 @@ namespace seyhandagitim
         {
             //her girişte kur ile güncellesin
 
-            INDOranUPD();
-            SepetFiyatVeIndUPD();
+            //INDOranUPD();
+            //SepetFiyatVeIndUPD();
             KurTablosuGetir();
-            SepetKuruUpdate();
+            // SepetKuruUpdate();
 
             HttpCookie user = Request.Cookies["myCerez"];
             string CLIENTREF = user["CLIENTREF"];
@@ -350,6 +350,7 @@ namespace seyhandagitim
             string yetki = giris["yetki"];
 
 
+        
             string GSipId = "";
             long FisId = 0, LineID = 0;
 
@@ -387,12 +388,13 @@ namespace seyhandagitim
 
         protected void GridSepet_HtmlDataCellPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableDataCellEventArgs e)
         {
-            //if (e.DataColumn.Name == "UPDATECOL")
-            //{
-            //    e.Cell.Attributes.Add("onclick", "EditorOnInit(" + GridSepet.GetRowValues(e.VisibleIndex, "STOCKREF").ToString() + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "CODE").ToString() + "-" + GridSepet.GetRowValues(e.VisibleIndex, "UrunAd").ToString() + "'," + e.VisibleIndex + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "LOGICALREF").ToString() + "');");
-            //    // e.Cell.Attributes.Add("onclick", "onCellClick(" + e.VisibleIndex + ", '" + e.Cell.Text + "')");
-            //    e.Cell.Text = "Satırı\nGüncelle";
-            //}
+            HttpCookie cookie = Request.Cookies["giris"];
+            if ((cookie["yetki"] == "1" || cookie["yetki"] == "4") && e.DataColumn.Name == "UPDATECOL")
+            {
+                e.Cell.Attributes.Add("onclick", "EditorOnInit(" + GridSepet.GetRowValues(e.VisibleIndex, "STOCKREF").ToString() + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "CODE").ToString() + "-" + GridSepet.GetRowValues(e.VisibleIndex, "UrunAd").ToString() + "'," + e.VisibleIndex + ",'" + GridSepet.GetRowValues(e.VisibleIndex, "LOGICALREF").ToString() + "');");
+                // e.Cell.Attributes.Add("onclick", "onCellClick(" + e.VisibleIndex + ", '" + e.Cell.Text + "')");
+                e.Cell.Text = "Satırı\nGüncelle";
+            }
 
         }
         protected void BTNIrsOnay_Click(object sender, EventArgs e)
@@ -423,7 +425,7 @@ namespace seyhandagitim
                     LFark = Convert.ToDecimal(Convert.ToDecimal(sread[1].ToString()) - Convert.ToDecimal(oku[1].ToString()));
                     if (LFark > 0)
                     {
-                        LMetin = LStok.ToString("#") + " ADET "+sread[2].ToString()+" EKSİK ";
+                        LMetin = LStok.ToString("#") + " ADET " + sread[2].ToString() + " EKSİK ";
                         ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alert('" + LMetin + " !!! ');", true);
                         return;
                     }

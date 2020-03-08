@@ -568,6 +568,13 @@ namespace seyhandagitim
             TXTTLFiyat.Text = Convert.ToDecimal(tlFiyat).ToString(",0.00");
             TXTTopTut.Text = Convert.ToDecimal(tlTopFiyat).ToString(",0.00");
             HFVFiyat.Value = Convert.ToDecimal(brFiyat).ToString(",0.00");
+            var reverseGenel =1-Convert.ToDouble(HFGenelOran.Value)/100;
+            var reverseMik = 1 - Convert.ToDouble(HFMikOran.Value)/100;
+            var reverseVade = 1 - Convert.ToDouble(HFVadeOran.Value)/100;
+            var reverseYetki = 1 - Convert.ToDouble(HFYetkiOran.Value)/100;
+
+            var listeFiyat = brFiyat / reverseGenel / reverseMik / reverseVade / reverseYetki;
+            HFPRCPRICE.Value = Convert.ToDecimal(listeFiyat).ToString(); 
         }
 
         string GSipId;

@@ -33,7 +33,7 @@ namespace seyhandagitim
 
               GridCari.DataSource = baglanti.TabloAl("select C.DEFINITION_ as Firma_Bilgisi,C.CODE as KODU,C.CITY as Sehir,C.LOGICALREF as LOGREF,"+
                   "ZZ.SonTarih "+
-                  "   from LG_"+baglanti.GFirma+"_CLCARD as C  left outer join (select  MAX(DATE_) as SonTarih,CLIENTREF  from "+baglanti.INITIAL2+"..Z_SipLine where Durum=0 group by CLIENTREF) as ZZ on C.LOGICALREF=ZZ.CLIENTREF where  CARDTYPE=1  "+SqlAra+"   order by Firma_Bilgisi asc");
+                  "   from LG_"+baglanti.GFirma+"_CLCARD as C  left outer join (select  MAX(DATE_) as SonTarih,CLIENTREF  from "+baglanti.INITIAL2+ "..Z_SipLine where Durum=0 group by CLIENTREF) as ZZ on C.LOGICALREF=ZZ.CLIENTREF where  CARDTYPE=1 and LOGICALREF in (40110,40111)  " + SqlAra+"   order by Firma_Bilgisi asc");
               GridCari.DataBind();
         }
 
