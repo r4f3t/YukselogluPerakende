@@ -283,13 +283,13 @@ namespace seyhandagitim {
         protected global::System.Web.UI.UpdatePanel UpdatePanel12;
         
         /// <summary>
-        /// LBLKoli control.
+        /// LBLAmbarStok control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LBLKoli;
+        protected global::System.Web.UI.WebControls.Label LBLAmbarStok;
         
         /// <summary>
         /// Button1 control.
@@ -425,6 +425,15 @@ namespace seyhandagitim {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLOrfLine;
+        
+        /// <summary>
+        /// UpdatePanel18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel18;
         
         /// <summary>
         /// UpdatePanel9 control.

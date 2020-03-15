@@ -247,6 +247,23 @@ namespace seyhandagitim
             GridGetir();
             AltToplamGetir();
 
+            HttpCookie cookie = Request.Cookies["giris"];
+            if ((cookie["yetki"] == "1" || cookie["yetki"] == "4"))
+            {
+                BTNIrsOnay.Visible = true;
+                GridSepet.Columns["DeleteCol"].Visible = true;
+
+                //for (int i = 0; i < GridSepet.Columns.Count; i++)
+                //{
+                //    if (GridSepet.Columns[i].Visible==false)
+                //    {
+                //        GridSepet.Columns[i].Visible = true;
+                //        LBLEURORate.Text += "  "+i.ToString();
+                //    }
+                //}
+                
+            }
+
         }
 
         protected void GridSepet_CustomButtonCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomButtonCallbackEventArgs e)
@@ -413,11 +430,11 @@ namespace seyhandagitim
             //ürünlerin stok kontrolü
             decimal LFark = 0;
             string LMetin = "";
-            sread = baglanti.DataReaderAl("select STOCKREF,AMOUNT,STOCKCODE FROM " + baglanti.INITIAL2 + "..Z_SipLine where  DURUM=0  and CLIENTREF=" + CLIENTREF + " and KIMDEN=" + yetki + "");
+            sread = baglanti.DataReaderAl("select STOCKREF,sum(AMOUNT) as P,STOCKCODE FROM " + baglanti.INITIAL2 + "..Z_SipLine where  DURUM=0  and CLIENTREF=" + CLIENTREF + "  GROUP BY STOCKREF,STOCKCODE");
             while (sread.Read())
             {
                 string stockref = sread[0].ToString();
-                oku = baglanti.DataReaderAl("SELECT STOCKREF,SUM(ONHAND) as R FROM LV_" + baglanti.GFirma + "_" + baglanti.GDONEM + "_STINVTOT WHERE INVENNO=0 and STOCKREF=" + stockref + " GROUP BY STOCKREF");
+                oku = baglanti.DataReaderAl("SELECT STOCKREF,SUM(ONHAND) as R FROM LV_" + baglanti.GFirma + "_" + baglanti.GDONEM + "_STINVTOT WHERE INVENNO=1 and STOCKREF=" + stockref + " GROUP BY STOCKREF");
                 if (oku.Read())
                 {
 
@@ -425,7 +442,7 @@ namespace seyhandagitim
                     LFark = Convert.ToDecimal(Convert.ToDecimal(sread[1].ToString()) - Convert.ToDecimal(oku[1].ToString()));
                     if (LFark > 0)
                     {
-                        LMetin = LStok.ToString("#") + " ADET " + sread[2].ToString() + " EKSİK ";
+                        LMetin = LFark.ToString("#") + " ADET " + sread[2].ToString() + " EKSİK ";
                         ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alert('" + LMetin + " !!! ');", true);
                         return;
                     }
@@ -440,11 +457,11 @@ namespace seyhandagitim
                 }
             }
             //sipyap
-            sread = baglanti.DataReaderAl("select SipID,SipStr from ZTbLUseR where UserId='" + giris["userid"] + "'");
+            sread = baglanti.DataReaderAl("select SipID,SipStr from ZTbLUseR where CLIENTREF='" + CLIENTREF+ "'");
             if (sread.Read()) { GSipId = sread[1].ToString() + "-" + sread[0].ToString(); }
             //durum güncelle
-            baglanti.VeriIslemler("Update " + baglanti.INITIAL2 + "..Z_SipLine set DURUM=3,DATE_='" + DateTime.Now.ToString("MM/dd/yyyy") + "' where DURUM=0  and CLIENTREF=" + CLIENTREF + " and KIMDEN=" + yetki + "");
-            baglanti.VeriIslemler("Update ZTbLUser set SipID=SipID+1 where  UserId=" + giris["userid"] + "");
+            baglanti.VeriIslemler("Update " + baglanti.INITIAL2 + "..Z_SipLine set DURUM=3,DATE_='" + DateTime.Now.ToString("MM/dd/yyyy") + "' where DURUM=0  and CLIENTREF=" + CLIENTREF + " ");
+            baglanti.VeriIslemler("Update ZTbLUser set SipID=SipID+1 where   CLIENTREF='" + CLIENTREF + "' ");
 
             GridSepet.DataBind();
             AltToplamGetir();

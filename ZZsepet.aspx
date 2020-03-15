@@ -39,7 +39,7 @@
         function HidePopupAndShowInfo(closedBy, returnValue) {
 
             popup1.Hide();
-            window.location.href = 'gsip.aspx';
+            window.location.href = 'zzsepet.aspx';
         }
         function HidePopupAndShowInfoOneri2(closedBy, returnValue) {
 
@@ -79,7 +79,7 @@
 
     <div style="float: right; display: inline-block; margin-right: 0px;">
         <div style="display: inline-block">
-            <dx:ASPxButton ID="BTNIrsOnay" runat="server" Width="90px" Height="55px" CssClass="sol" OnClick="BTNIrsOnay_Click" Text="İrsaliye " Visible="true">
+            <dx:ASPxButton ID="BTNIrsOnay" runat="server" Width="90px" Height="55px" CssClass="sol" OnClick="BTNIrsOnay_Click" Text="İrsaliye " Visible="false">
             </dx:ASPxButton>
         </div>
         <div style="display: none">
@@ -175,7 +175,7 @@
 
             </dx:GridViewDataMemoColumn>
 
-            <dx:GridViewCommandColumn VisibleIndex="13"  CellStyle-Font-Size="12pt" Width="70px">
+            <dx:GridViewCommandColumn VisibleIndex="13" Visible="false"  Name="DeleteCol"  CellStyle-Font-Size="12pt" Width="70px">
                 <EditButton Visible="false" Text="Düzenle">
                     <Image Height="15" Width="15" Url="/image/add.png"></Image>
                 </EditButton>

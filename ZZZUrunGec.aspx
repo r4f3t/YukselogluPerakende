@@ -244,7 +244,7 @@
                         </style>
                         <asp:UpdatePanel ID="UpdatePanel12" runat="server">
                             <ContentTemplate>
-                                <asp:Label ID="LBLKoli" CssClass="LBlKoliSol" ForeColor="#990000" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt" Text=""></asp:Label>
+                                    <asp:Label ID="LBLAmbarStok" CssClass="LBlKoliSol" ForeColor="Red" runat="server" Font-Names="Trebuchet MS" Font-Size="12pt"></asp:Label>
                             </ContentTemplate>
                         </asp:UpdatePanel>
 
@@ -329,6 +329,17 @@
                         </asp:UpdatePanel>
                     </td>
                 </tr>
+
+                  <tr>
+                    <td colspan="6" style="text-align: center;">
+                        <asp:UpdatePanel ID="UpdatePanel18" runat="server">
+                            <ContentTemplate>
+                        
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </td>
+                </tr>
+
 
 
                 <tr>

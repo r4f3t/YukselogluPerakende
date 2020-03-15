@@ -34,7 +34,7 @@ namespace seyhandagitim
             oku = baglanti.DataReaderAl("select Z from LG_XT1001_" + baglanti.GFirma + " where PARLOGREF=" + stockref + "");
             if (oku.Read())
             {
-                LBLKoli.Text = "Koli Adeti:" + oku["Z"].ToString();
+                //  LBLKoli.Text = "Koli Adeti:" + oku["Z"].ToString();
             }
 
         }
@@ -533,7 +533,19 @@ namespace seyhandagitim
 
 
         }
-
+        private void UrunAmbarStokCek()
+        {
+            string stockref = Request.QueryString["stref"];
+            oku = baglanti.DataReaderAl("SELECT STOCKREF,SUM(ONHAND) as R FROM LV_" + baglanti.GFirma + "_" + baglanti.GDONEM + "_STINVTOT WHERE INVENNO=1 and STOCKREF=" + stockref + " GROUP BY STOCKREF");
+            if (oku.Read())
+            {
+                LBLAmbarStok.Text = "Ambar Stoğu : " + oku[1].ToString();
+            }
+            else
+            {
+                LBLAmbarStok.Text = "Ambar Stoğu Kaydı Bulunamamıştır. ";
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             //TXTMik.Attributes["onmouseover"] = "javascript:this.focus();";
@@ -541,14 +553,15 @@ namespace seyhandagitim
 
             if (!IsPostBack)
             {
+                UrunAmbarStokCek();
                 //    KilitCheck();
-                KoliBilgisiCek();
+                // KoliBilgisiCek();
                 // SipKontrol();
                 BilgiCek();
                 CMBCEK();
 
                 KampanyaCheck();
-                SepetCheck();
+                //SepetCheck();
                 UPDSEPET();
                 VADEFiyatGetir();
             }
@@ -568,13 +581,13 @@ namespace seyhandagitim
             TXTTLFiyat.Text = Convert.ToDecimal(tlFiyat).ToString(",0.00");
             TXTTopTut.Text = Convert.ToDecimal(tlTopFiyat).ToString(",0.00");
             HFVFiyat.Value = Convert.ToDecimal(brFiyat).ToString(",0.00");
-            var reverseGenel =1-Convert.ToDouble(HFGenelOran.Value)/100;
-            var reverseMik = 1 - Convert.ToDouble(HFMikOran.Value)/100;
-            var reverseVade = 1 - Convert.ToDouble(HFVadeOran.Value)/100;
-            var reverseYetki = 1 - Convert.ToDouble(HFYetkiOran.Value)/100;
+            var reverseGenel = 1 - Convert.ToDouble(HFGenelOran.Value) / 100;
+            var reverseMik = 1 - Convert.ToDouble(HFMikOran.Value) / 100;
+            var reverseVade = 1 - Convert.ToDouble(HFVadeOran.Value) / 100;
+            var reverseYetki = 1 - Convert.ToDouble(HFYetkiOran.Value) / 100;
 
             var listeFiyat = brFiyat / reverseGenel / reverseMik / reverseVade / reverseYetki;
-            HFPRCPRICE.Value = Convert.ToDecimal(listeFiyat).ToString(); 
+            HFPRCPRICE.Value = Convert.ToDecimal(listeFiyat).ToString();
         }
 
         string GSipId;
@@ -591,7 +604,7 @@ namespace seyhandagitim
             string SipRef = Request.QueryString["SipRef"];
             string sayfaYenile = Request.QueryString["sayfaYenile"];
             string BFiyat = "0", miktar = TXTMik.Text;
-
+          
             //  string Aciklama = TXTAcik.Text;
             object UREF = "1";
             string SipId = "0";
@@ -610,11 +623,16 @@ namespace seyhandagitim
                 ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alert('Satış Şartı Girilmemiş Bir Ürün Ekleyemezsiniz Lütfen Yetkilinize Başvurun !!! ');", true);
                 return;
             }
+            if (ISADD == "1")
+            {
 
-
-            baglanti.VeriIslemler("insert into " + baglanti.INITIAL2 + "..Z_SipLine (SONFIYAT,SONFIYATORAN,KAMPORAN,KURINDORAN,KIMDEN,TRADINGGRP,VATINC,DIVISION,TOPTLFIYAT,VAT,TLFIYAT,LISTFIYAT,CURRID,CURRRATE,VADESTR,MIKSTR,ADDDATE,YINDORAN,CLIENTREF,DURUM,SIPID,FICHENO,DATE_,STOCKREF,STOCKCODE,STOCKNAME,AMOUNT,PRICE,GENELIORAN,VADORAN,MIKORAN,LINEEXP) values" +
+                baglanti.VeriIslemler("insert into " + baglanti.INITIAL2 + "..Z_SipLine (SONFIYAT,SONFIYATORAN,KAMPORAN,KURINDORAN,KIMDEN,TRADINGGRP,VATINC,DIVISION,TOPTLFIYAT,VAT,TLFIYAT,LISTFIYAT,CURRID,CURRRATE,VADESTR,MIKSTR,ADDDATE,YINDORAN,CLIENTREF,DURUM,SIPID,FICHENO,DATE_,STOCKREF,STOCKCODE,STOCKNAME,AMOUNT,PRICE,GENELIORAN,VADORAN,MIKORAN,LINEEXP) values" +
             "(" + HFSONFIYAT.Value.Replace(",", ".") + "," + HFSONFIYATORAN.Value.Replace(",", ".") + "," + HFKAMPORAN.Value.Replace(",", ".") + "," + HFCURROran.Value + "," + giris["yetki"] + ",'" + HFTRADINGGRP.Value + "'," + HFVATINC.Value + "," + HFDIVISION.Value + "," + TXTTopTut.Text.Replace(",", ".") + "," + HFVAT.Value + "," + TXTTLFiyat.Text.Replace(",", ".") + "," + HFPRCPRICE.Value.Replace(",", ".") + "," + HFCURR.Value + "," + CURRATE.ToString().Replace(",", ".") + ",'" + CMBVade.Text + "','" + CMBMiktar.Text + "','" + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss ") + "'," + HFYetkiOran.Value.Replace(",", ".") + "," + CariId + ",0," + SipId + ",'" + GSipId + "','" + CTarih + "'," + stockref + ",'" + HFUCODE.Value + "','" + HFUNAME.Value + "'," + TXTMik.Text + "," + HFVFiyat.Value.Replace(",", ".") + "," + HFGenelOran.Value.Replace(",", ".") + "," + CMBVade.SelectedItem.Value.ToString().Replace(",", ".") + "," + CMBMiktar.SelectedItem.Value.ToString().Replace(",", ".") + ",'" + LineExp + "')");
-
+            }
+            else
+            {
+                baglanti.VeriIslemler("update " + baglanti.INITIAL2 + "..Z_SipLine set KURINDORAN=" + HFCURROran.Value + ",TOPTLFIYAT=" + TXTTopTut.Text.Replace(",", ".") + ",VAT=" + HFVAT.Value + ",TLFIYAT=" + TXTTLFiyat.Text.Replace(",", ".") + ",LISTFIYAT=" + HFPRCPRICE.Value.Replace(",", ".") + ",CURRID=" + HFCURR.Value + ",CURRRATE=" + CURRATE.ToString().Replace(",", ".") + ",VADESTR='" + CMBVade.Text + "',MIKSTR='" + CMBMiktar.Text + "',EDITDATE='" + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss") + "',AMOUNT=" + TXTMik.Text + ",PRICE=" + HFVFiyat.Value.Replace(",", ".") + ",GENELIORAN=" + HFGenelOran.Value.Replace(",", ".") + ",VADORAN=" + CMBVade.SelectedItem.Value.ToString().Replace(",", ".") + ",MIKORAN=" + CMBMiktar.SelectedItem.Value.ToString().Replace(",", ".") + ",LINEEXP='" + LineExp + "' where LOGICALREF=" + SipRef + "");
+            }
             //    //baglanti.VeriIslemler("update " + baglanti.INITIAL2 + "..Z_SipLine set KURINDORAN=" + HFCURROran.Value + ",TOPTLFIYAT=" + TXTTopTut.Text.Replace(",", ".") + ",VAT=" + HFVAT.Value + ",TLFIYAT=" + TXTTLFiyat.Text.Replace(",", ".") + ",LISTFIYAT=" + HFPRCPRICE.Value.Replace(",", ".") + ",CURRID=" + HFCURR.Value + ",CURRRATE=" + CURRATE.ToString().Replace(",", ".") + ",VADESTR='" + CMBVade.Text + "',MIKSTR='" + CMBMiktar.Text + "',EDITDATE='" + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss") + "',AMOUNT=" + TXTMik.Text + ",PRICE=" + HFVFiyat.Value.Replace(",", ".") + ",GENELIORAN=" + HFGenelOran.Value.Replace(",", ".") + ",VADORAN=" + CMBVade.SelectedItem.Value.ToString().Replace(",", ".") + ",MIKORAN=" + CMBMiktar.SelectedItem.Value.ToString().Replace(",", ".") + ",LINEEXP='" + LineExp + "' where LOGICALREF=" + SipRef + "");
             //    baglanti.VeriIslemler("update " + baglanti.INITIAL2 + "..Z_SipLine set EDITDATE='" + DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss") + "',AMOUNT=AMOUNT+" + TXTMik.Text + " where LOGICALREF=" + HFSipLineRef.Value + "");
 
