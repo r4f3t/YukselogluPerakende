@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31DABFE9-5B0F-48B3-9F70-D0A1A4A9B469}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>B2BAdmin</RootNamespace>
+    <AssemblyName>TimerAktarim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconarchive-Red-Orb-Alphabet-Letter-M %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2014.2.715.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\baglanti.cs" />
+    <Compile Include="classes\baglantimy.cs" />
+    <Compile Include="classes\LOGOKampanya.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAKTAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMAKTAR.Designer.cs">
+      <DependentUpon>FRMAKTAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMDBAktarim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMDBAktarim.Designer.cs">
+      <DependentUpon>FRMDBAktarim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMItems.Designer.cs">
+      <DependentUpon>FRMItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMYetkiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMYetkiAdd.Designer.cs">
+      <DependentUpon>FRMYetkiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMYetkis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMYetkis.Designer.cs">
+      <DependentUpon>FRMYetkis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMKampRecBas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMKampRecBas.designer.cs">
+      <DependentUpon>FRMKampRecBas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMAna.Designer.cs">
+      <DependentUpon>FRMAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMAraItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMAraItem.Designer.cs">
+      <DependentUpon>FRMAraItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMCari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMCari.Designer.cs">
+      <DependentUpon>FRMCari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMGiris.Designer.cs">
+      <DependentUpon>FRMGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMKAMPADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMKAMPADD.Designer.cs">
+      <DependentUpon>FRMKAMPADD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmKampRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmKampRec.Designer.cs">
+      <DependentUpon>FrmKampRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMMikAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMMikAdd.Designer.cs">
+      <DependentUpon>FRMMikAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMMiks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMMiks.Designer.cs">
+      <DependentUpon>FRMMiks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmQueryBas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmQueryBas.designer.cs">
+      <DependentUpon>FrmQueryBas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmQueryLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmQueryLine.designer.cs">
+      <DependentUpon>FrmQueryLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmSepet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmSepet.Designer.cs">
+      <DependentUpon>FrmSepet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmSipLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FrmSipLine.Designer.cs">
+      <DependentUpon>FrmSipLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMUye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMUye.Designer.cs">
+      <DependentUpon>FRMUye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVadeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVadeAdd.Designer.cs">
+      <DependentUpon>FRMVadeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVades.Designer.cs">
+      <DependentUpon>FRMVades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVMik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\FRMVMik.Designer.cs">
+      <DependentUpon>FRMVMik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OLDFRMS\ZFRMItemName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OLDFRMS\ZFRMItemName.Designer.cs">
+      <DependentUpon>ZFRMItemName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZZAlternate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZZAlternate.Designer.cs">
+      <DependentUpon>ZZAlternate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZZAlternate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZZAlternate2.Designer.cs">
+      <DependentUpon>ZZAlternate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZZAltmini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZZAltmini.Designer.cs">
+      <DependentUpon>ZZAltmini.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAKTAR.resx">
+      <DependentUpon>FRMAKTAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMDBAktarim.resx">
+      <DependentUpon>FRMDBAktarim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMItems.resx">
+      <DependentUpon>FRMItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMYetkiAdd.resx">
+      <DependentUpon>FRMYetkiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMYetkis.resx">
+      <DependentUpon>FRMYetkis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMKampRecBas.resx">
+      <DependentUpon>FRMKampRecBas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMAna.resx">
+      <DependentUpon>FRMAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMAraItem.resx">
+      <DependentUpon>FRMAraItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMCari.resx">
+      <DependentUpon>FRMCari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMGiris.resx">
+      <DependentUpon>FRMGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMKAMPADD.resx">
+      <DependentUpon>FRMKAMPADD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FrmKampRec.resx">
+      <DependentUpon>FrmKampRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMMikAdd.resx">
+      <DependentUpon>FRMMikAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMMiks.resx">
+      <DependentUpon>FRMMiks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FrmQueryBas.resx">
+      <DependentUpon>FrmQueryBas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FrmQueryLine.resx">
+      <DependentUpon>FrmQueryLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FrmSepet.resx">
+      <DependentUpon>FrmSepet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FrmSipLine.resx">
+      <DependentUpon>FrmSipLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMUye.resx">
+      <DependentUpon>FRMUye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMVadeAdd.resx">
+      <DependentUpon>FRMVadeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMVades.resx">
+      <DependentUpon>FRMVades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OLDFRMS\FRMVMik.resx">
+      <DependentUpon>FRMVMik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="OLDFRMS\ZFRMItemName.resx">
+      <DependentUpon>ZFRMItemName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZZAlternate.resx">
+      <DependentUpon>ZZAlternate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZZAlternate2.resx">
+      <DependentUpon>ZZAlternate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZZAltmini.resx">
+      <DependentUpon>ZZAltmini.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\barcode-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\bullet-arrow-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Ironman-Mask-3-Old-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Terminal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\The-Case-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="-1002.XML" />
+    <Content Include="3666.XML">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="infokoza.png" />
+    <None Include="bin\Debug\para.wav" />
+    <None Include="bin\Debug\Caisse.aiff" />
+    <None Include="bin\Debug\CaisseEnregistreuse.wav" />
+    <Content Include="470.XML">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Iconarchive-Red-Orb-Alphabet-Letter-M %281%29.ico" />
+    <Content Include="para.wav" />
+    <Content Include="RAFETTTT.XML" />
+    <Content Include="rafetxxx.XML" />
+    <Content Include="Sekkyumu-Developpers-Terminal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="UnityObjects">
+      <Guid>{51F6657D-9972-45FD-8D5D-98849802A9C9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
